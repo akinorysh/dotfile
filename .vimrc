@@ -1,4 +1,7 @@
 "dein ----------
+" $ mkdir -p ~/.cache/dein/repos/github.com/Shougo/dein.vim
+" $ git clone https://github.com/Shougo/dein.vim/git \
+"     ~/.cache/dein/repos/github.com/Shougo/dein.vim
 if &compatible
 	set nocompatible
 endif
@@ -42,7 +45,7 @@ function! GitBash()
                 \ 'term_name': 'Git',
                 \ 'term_finish': 'close',
                 \ 'curwin': v:true,
-                \ 'cwd': $USERPROFILE,
+                \ 'cwd': expand("%:h"),
                 \ 'env': l:env,
                 \ })
 endfunction
@@ -75,6 +78,7 @@ set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set nobackup
 set noswapfile
 set autoread
+set autochdir
 set hidden
 set showcmd
 set mouse=a
@@ -103,7 +107,7 @@ set shiftwidth=2
 set showtabline=2
 set laststatus=2
 set clipboard+=unnamed
-" sets.font
+" sets font (ref : https://github.com/miiton/Cica)
 set guifont=Cica:h12
 set printfont=Cica:h8
 " sets.search
@@ -117,8 +121,12 @@ set hlsearch
 " key.move
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-j> }
-nnoremap <C-k> {
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+" key.searchoff
+nnoremap /<C-[> :set hlsearch!<CR>
 " key.commands
 cnoremap <C-s> source %
 cnoremap <C-r> new ~/.vimrc
