@@ -121,15 +121,17 @@ set hlsearch
 " key.move
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-l> <C-w>l
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
-nnoremap <C-h> <C-w>h
 " key.searchoff
 nnoremap /<C-[> :set hlsearch!<CR>
+" key.leader
+let g:mapleader = "\<Space>"
+nnoremap <Leader>s :source %<CR>
+nnoremap <Leader>, :new ~/.vimrc
+nnoremap <Leader>t :call GitBash()<CR>
 " key.commands
-cnoremap <C-s> source %
-cnoremap <C-r> new ~/.vimrc
-cnoremap <C-d> e ~/dev/
+cnoremap <C-d> ~/dev/
 cnoremap <C-b> :<C-u>call GitBash()
+
+"utility commands -----
+
 
