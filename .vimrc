@@ -126,12 +126,11 @@ nnoremap /<C-[> :set hlsearch!<CR>
 " key.leader
 let g:mapleader = "\<Space>"
 nnoremap <Leader>s :source %<CR>
-nnoremap <Leader>, :new ~/.vimrc
+nnoremap <Leader>, :new ~/.vimrc<CR>
 nnoremap <Leader>t :call GitBash()<CR>
 " key.commands
 cnoremap <C-d> ~/dev/
 cnoremap <C-b> :<C-u>call GitBash()
 
 "utility commands -----
-
 
