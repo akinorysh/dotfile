@@ -13,6 +13,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('itchyny/lightline.vim')
   call dein#add('ryanoasis/vim-devicons')
+  call dein#add('kovisoft/slimv')
   "dein.colorscheme
   call dein#add('yasukotelin/shirotelin', {'merged': 0})
   call dein#add('jacoborus/tender')
@@ -25,30 +26,7 @@ if dein#check_install()
 	call dein#install()
 endif
 "dein.delete
-" call map(dein#check_clean(), "delete(v:val, 'rf')")
-
-"GitBash terminal --------------------
-function! GitBash()
-    " Setting UTF-8 (Japanese Windows set 'ja' as default)
-    let l:env = {
-                \ 'LANG': systemlist('"C:/Program Files/Git/usr/bin/locale.exe" -iU')[0],
-                \ }
-    " for remote
-    if has('clientserver')
-        call extend(l:env, {
-                    \ 'GVIM': $VIMRUNTIME,
-                    \ 'VIM_SERVERNAME': v:servername,
-                    \ })
-    endif
-    " term_start, then GitBash
-    call term_start(['C:/Program Files/Git/bin/bash.exe', '-l'], {
-                \ 'term_name': 'Git',
-                \ 'term_finish': 'close',
-                \ 'curwin': v:true,
-                \ 'cwd': expand("%:h"),
-                \ 'env': l:env,
-                \ })
-endfunction
+"call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 "LightLine.vim --------------------
 let g:lightline = {
@@ -130,7 +108,7 @@ nnoremap <Leader>, :new ~/.vimrc<CR>
 nnoremap <Leader>t :call GitBash()<CR>
 " key.commands
 cnoremap <C-d> ~/dev/
-cnoremap <C-b> :<C-u>call GitBash()
 
 "utility commands -----
+nnoremap <Leader>e ,b
 
