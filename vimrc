@@ -53,6 +53,7 @@ endfunction
 set encoding=utf-8
 scriptencoding utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
+set ff=unix
 set nobackup
 set noswapfile
 set autoread
@@ -105,10 +106,8 @@ nnoremap /<C-[> :set hlsearch!<CR>
 let g:mapleader = "\<Space>"
 nnoremap <Leader>s :source %<CR>
 nnoremap <Leader>, :new ~/.vimrc<CR>
-nnoremap <Leader>t :call GitBash()<CR>
 " key.commands
 cnoremap <C-d> ~/dev/
 
 "utility commands -----
-nnoremap <Leader>e ,b
 

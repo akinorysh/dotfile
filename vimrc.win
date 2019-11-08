@@ -1,7 +1,5 @@
 source ~/dev/dotfile/vimrc
 
-nnoremap <Leader>s :source $VIM/_vimrc<CR>
-nnoremap <Leader>, :new ~/dev/dotfile/.vimrc<CR>
 
 "GitBash terminal --------------------
 function! GitBash()
@@ -17,6 +15,7 @@ function! GitBash()
                     \ })
     endif
     " term_start, then GitBash
+    sp
     call term_start(['C:/Program Files/Git/bin/bash.exe', '-l'], {
                 \ 'term_name': 'Git',
                 \ 'term_finish': 'close',
@@ -26,6 +25,9 @@ function! GitBash()
                 \ })
 endfunction
 
-cnoremap <C-b> :<C-u>call GitBash()
+nnoremap <Leader>s :source $VIM/_vimrc<CR>
+nnoremap <Leader>, :new ~/dev/dotfile/.vimrc<CR>
+nnoremap <Leader>_ :new $VIM/_vimrc<CR>
+nnoremap <Leader>t :call GitBash()<CR>
 
 
