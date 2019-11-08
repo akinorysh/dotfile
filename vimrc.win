@@ -1,0 +1,31 @@
+source ~/dev/dotfile/vimrc
+
+nnoremap <Leader>s :source $VIM/_vimrc<CR>
+nnoremap <Leader>, :new ~/dev/dotfile/.vimrc<CR>
+
+"GitBash terminal --------------------
+function! GitBash()
+    " Setting UTF-8 (Japanese Windows set 'ja' as default)
+    let l:env = {
+                \ 'LANG': systemlist('"C:/Program Files/Git/usr/bin/locale.exe" -iU')[0],
+                \ }
+    " for remote
+    if has('clientserver')
+        call extend(l:env, {
+                    \ 'GVIM': $VIMRUNTIME,
+                    \ 'VIM_SERVERNAME': v:servername,
+                    \ })
+    endif
+    " term_start, then GitBash
+    call term_start(['C:/Program Files/Git/bin/bash.exe', '-l'], {
+                \ 'term_name': 'Git',
+                \ 'term_finish': 'close',
+                \ 'curwin': v:true,
+                \ 'cwd': expand("%:h"),
+                \ 'env': l:env,
+                \ })
+endfunction
+
+cnoremap <C-b> :<C-u>call GitBash()
+
+
