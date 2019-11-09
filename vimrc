@@ -13,7 +13,10 @@ if dein#load_state('~/.cache/dein')
 	call dein#begin(expand('~/.cache/dein'))
 
   call dein#add('Shougo/dein.vim')
+
+  " git
   call dein#add('tpope/vim-fugitive')
+  call dein#add('airblade/vim-gitgutter')
 
   " GUI enhancements
   call dein#add('ryanoasis/vim-devicons')
@@ -36,7 +39,10 @@ endif
 "dein.delete
 "call map(dein#check_clean(), "delete(v:val, 'rf')")
 
-"LightLine.vim
+"vim-gitgutter
+set updatetime=300
+
+"lightline.vim
 let g:lightline = {
       \  'colorscheme': 'wombat',
       \  'active' : { 'left' : [['mode', 'paste'],
