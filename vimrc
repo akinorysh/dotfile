@@ -46,20 +46,16 @@ set updatetime=300
 let g:lightline = {
       \  'colorscheme': 'wombat',
       \  'active' : { 'left' : [['mode', 'paste'],
-      \                         ['readonly', 'filepath', 'modified']],
+      \                         ['readonly', 'llfilepath', 'modified']],
       \               'right': [['gitbranch'],
-      \                         ['fileformat', 'filetype']]},
+      \                         ['fileformat']]},
       \  'component_function' :{ 'gitbranch' : 'LightlineGitbranch',
-      \                          'filepath'  : 'LightlineFilePath' },
+      \                          'llfilepath'  : 'LightlineFilePath' },
       \  'separator':    {'left' : "", 'right': ""},
       \  'subseparator': {'left' : "", 'right': ""}
       \}
 function! LightlineFilePath()
-  if winwidth(0) > 180
-    return expand("%:s")
-  else
-    return expand("%:t")
-  endif
+  return expand('%:t')
 endfunction
 
 function! LightlineGitbranch()
