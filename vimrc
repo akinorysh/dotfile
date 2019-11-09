@@ -47,9 +47,9 @@ let g:lightline = {
       \  'colorscheme': 'wombat',
       \  'active' : { 'left' : [['mode', 'paste'],
       \                         ['readonly', 'filepath', 'modified']],
-      \               'right': [['gitbranch', 'paste'],
+      \               'right': [['gitbranch'],
       \                         ['fileformat', 'filetype']]},
-      \  'component_function' :{ 'gitbranch' : 'fugitive#head',
+      \  'component_function' :{ 'gitbranch' : 'LightlineGitbranch',
       \                          'filepath'  : 'LightlineFilePath' },
       \  'separator':    {'left' : "", 'right': ""},
       \  'subseparator': {'left' : "", 'right': ""}
@@ -59,6 +59,15 @@ function! LightlineFilePath()
     return expand("%:s")
   else
     return expand("%:t")
+  endif
+endfunction
+
+function! LightlineGitbranch()
+  let out = FugitiveHead()
+  if out == ''
+    return ''
+  else
+    return '' . out
   endif
 endfunction
 
@@ -172,7 +181,7 @@ vnoremap H ^
 nnoremap L $
 vnoremap L $
 
-" TRIAL
+" misc
 nnoremap <Leader>s :source %<CR>
 nnoremap <Leader>, :new ~/.vimrc<CR>
 cnoremap <C-d> ~/dev/
