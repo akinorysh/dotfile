@@ -1,3 +1,4 @@
+let g:mapleader = "\<Space>"
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " # dein
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -13,6 +14,9 @@ if dein#load_state('~/.cache/dein')
 	call dein#begin(expand('~/.cache/dein'))
 
   call dein#add('Shougo/dein.vim')
+
+  " util
+  call dein#add('scrooloose/nerdtree')
 
   " git
   call dein#add('tpope/vim-fugitive')
@@ -66,6 +70,13 @@ function! LightlineGitbranch()
     return '' . out
   endif
 endfunction
+
+"NERDTree
+nnoremap <Leader>e :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | cd ~ | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Settings
@@ -161,7 +172,6 @@ endif
 " Keyboard Shortcut
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "
-let g:mapleader = "\<Space>"
 
 " Move by line
 nnoremap j gj
@@ -176,6 +186,10 @@ nnoremap H ^
 vnoremap H ^
 nnoremap L $
 vnoremap L $
+
+" Toggle Tags
+nnoremap <C-TAB> gt
+nnoremap <C-S-TAB> :tabe<CR>
 
 " misc
 nnoremap <Leader>s :source %<CR>
