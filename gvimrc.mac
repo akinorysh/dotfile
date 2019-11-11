@@ -1,0 +1,9 @@
+source ~/dev/dotfile/.vimrc
+
+colorscheme molokai
+set lines=30
+set columns=90
+set cmdheight=1
+set guifont=Cica:h20
+set printfont=Cica:h20
+set linespace=0
