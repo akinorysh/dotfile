@@ -19,6 +19,13 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('dhruvasagar/vim-table-mode')
   call dein#add('simeji/winresizer')
+  call dein#add('osyo-manga/vim-over')
+
+  " operator / commands
+  call dein#add('kana/vim-operator-user')
+  call dein#add('kana/vim-operator-replace')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-repeat')
 
   " git
   call dein#add('tpope/vim-fugitive')
@@ -34,6 +41,11 @@ if dein#load_state('~/.cache/dein')
 
   " Language supports
   call dein#add('kovisoft/slimv')
+
+  " TO BE CONTINUED...
+  " call dein#add('terryma/vim-multiple-cursors')
+  " call dein#add('yuttie/comfortable-motion.vim')
+
 
   call dein#end()
 	call dein#save_state()
@@ -208,3 +220,6 @@ cnoremap <C-d> ~/dev/
 " my own map using only m
 nnoremap m mm
 nnoremap ` `m
+
+" for vim-operator-replace
+map R <Plug>(operator-replace)
