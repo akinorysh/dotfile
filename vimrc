@@ -17,6 +17,8 @@ if dein#load_state('~/.cache/dein')
 
   " util
   call dein#add('scrooloose/nerdtree')
+  call dein#add('dhruvasagar/vim-table-mode')
+  call dein#add('simeji/winresizer')
 
   " git
   call dein#add('tpope/vim-fugitive')
@@ -104,7 +106,7 @@ set visualbell
 set showmatch
 set smartindent
 set showtabline=2
-set clipboard+=unnamed
+set clipboard=
 set signcolumn=yes
 
 " Sane splits
@@ -190,6 +192,13 @@ vnoremap L $
 " Toggle Tags
 nnoremap <C-TAB> gt
 nnoremap <C-S-TAB> :tabe<CR>
+
+" Use clipboard
+nnoremap <Leader>y "*Y
+nnoremap <Leader>p "*p
+
+" Rich term mode
+tnoremap <C-[><C-[> <C-\><C-n>
 
 " misc
 nnoremap <Leader>s :source %<CR>
