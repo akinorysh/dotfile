@@ -192,14 +192,12 @@ nnoremap j gj
 nnoremap k gk
 
 " Scroll half a page
-nnoremap <C-k> <C-u>zz
+nnoremap <C-h> ^
+vnoremap <C-h> ^
 nnoremap <C-j> <C-d>zz
-
-" Jump to start and end of line
-nnoremap H ^
-vnoremap H ^
-nnoremap L $
-vnoremap L $
+nnoremap <C-k> <C-u>zz
+nnoremap <C-l> $
+vnoremap <C-l> $
 
 " Toggle Tags
 nnoremap <C-TAB> gt
