@@ -221,5 +221,8 @@ cnoremap <C-d> ~/dev/
 nnoremap m mm
 nnoremap ` `m
 
+" zz can be single z
+nnoremap z zz
+
 " for vim-operator-replace
 map R <Plug>(operator-replace)
