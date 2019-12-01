@@ -1,0 +1,10 @@
+# git aliases
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add *"
+alias gc="git commit"
+alias gp="git pull"
+alias gP="git push"
+
+source ~/dotfile/bash/git-prompt.sh
+source ~/dotfile/bash/git-completion.bash
