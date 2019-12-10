@@ -118,7 +118,7 @@ set visualbell
 set showmatch
 set smartindent
 set showtabline=2
-set clipboard=
+set clipboard=unnamedplus
 set signcolumn=yes
 
 " Sane splits
