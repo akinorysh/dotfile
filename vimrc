@@ -123,6 +123,7 @@ set ambiwidth=double
 set virtualedit=onemore
 set visualbell
 set showmatch
+source $VIMRUNTIME/macros/matchit.vim
 set smartindent
 set showtabline=2
 set clipboard=
