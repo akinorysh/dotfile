@@ -181,14 +181,14 @@ set printfont=Cica:h8
 
 " colorscheme
 syntax enable
-colorscheme molokai
-set background=dark
 if (has("termguicolors"))
   set termguicolors
 endif
 if !has('gui_running')
   set t_Co=256
 endif
+set background=dark
+colorscheme molokai
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Keyboard Shortcut
