@@ -42,6 +42,13 @@ if dein#load_state('~/.cache/dein')
   " Language supports
   call dein#add('kovisoft/slimv')
 
+  " Web development
+
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('othree/html5.vim')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('mattn/emmet-vim')
+
   " TO BE CONTINUED...
   " call dein#add('terryma/vim-multiple-cursors')
   " call dein#add('yuttie/comfortable-motion.vim')
