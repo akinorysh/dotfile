@@ -42,6 +42,13 @@ if dein#load_state('~/.cache/dein')
   " Language supports
   call dein#add('kovisoft/slimv')
 
+  " Web development
+
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('othree/html5.vim')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('mattn/emmet-vim')
+
   " TO BE CONTINUED...
   " call dein#add('terryma/vim-multiple-cursors')
   " call dein#add('yuttie/comfortable-motion.vim')
@@ -116,9 +123,10 @@ set ambiwidth=double
 set virtualedit=onemore
 set visualbell
 set showmatch
+source $VIMRUNTIME/macros/matchit.vim
 set smartindent
 set showtabline=2
-set clipboard=unnamedplus
+set clipboard=
 set signcolumn=yes
 
 " Sane splits
@@ -173,14 +181,14 @@ set printfont=Cica:h8
 
 " colorscheme
 syntax enable
-colorscheme molokai
-set background=dark
 if (has("termguicolors"))
   set termguicolors
 endif
 if !has('gui_running')
   set t_Co=256
 endif
+set background=dark
+colorscheme molokai
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Keyboard Shortcut
