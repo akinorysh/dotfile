@@ -49,6 +49,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('hail2u/vim-css3-syntax')
   call dein#add('mattn/emmet-vim')
 
+  " clojure
+  call dein#add('junegunn/fzf')
+  call dein#add('guns/vim-sexp')
+  call dein#add('liquidz/vim-iced')
+
   " TO BE CONTINUED...
   " call dein#add('terryma/vim-multiple-cursors')
   " call dein#add('yuttie/comfortable-motion.vim')
@@ -98,6 +103,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | cd ~ | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+"vim-iced
+let g:iced_enable_default_key_mappings = v:true
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Settings
