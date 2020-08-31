@@ -17,6 +17,8 @@ if dein#load_state('~/.cache/dein')
 
   " util
   call dein#add('scrooloose/nerdtree')
+  " switch from nerdtree if you like...
+  " call dein#add('lambdalisue/fern.vim')
   call dein#add('dhruvasagar/vim-table-mode')
   call dein#add('simeji/winresizer')
   call dein#add('osyo-manga/vim-over')
