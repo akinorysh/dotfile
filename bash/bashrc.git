@@ -8,5 +8,5 @@ alias gp="git pull"
 alias gP="git push"
 alias gl='git log --pretty=oneline --graph --decorate --abbrev-commit'
 
-source ~/dotfile/bash/git-prompt.sh
-source ~/dotfile/bash/git-completion.bash
+source $HOME/.dotfile/bash/git-prompt.sh
+source $HOME/.dotfile/bash/git-completion.bash

@@ -2,5 +2,6 @@
 config
 
 # USAGE
-1. Place it in ~
-2. In .**rc, `source ~/dotfile/**rc`
+`cd ~`
+`git clone https://github.com/aknorsh/dotfile.git .dotfile`
+Add `source ~/dotfile/**rc` in each rc file.

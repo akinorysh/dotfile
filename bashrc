@@ -1,4 +1,4 @@
-source ~/dotfile/bash/bashrc.git
+source $HOME/.dotfile/bash/bashrc.git
 
 # PROMPT with git branch
 GIT_PS1_SHOWDIRTYSTATE=true
