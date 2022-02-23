@@ -1,0 +1,93 @@
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Settings
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+set autoindent
+set encoding=utf-8
+scriptencoding utf-8
+set printencoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
+set ff=unix
+set scrolloff=2
+set noshowmode
+set hidden
+set nowrap
+set nojoinspaces
+
+set nobackup
+set noswapfile
+set autoread
+set autochdir
+set ambiwidth=double
+set virtualedit=onemore
+set visualbell
+set showmatch
+source $VIMRUNTIME/macros/matchit.vim
+set smartindent
+set showtabline=2
+set clipboard=
+set signcolumn=yes
+
+" Sane splits
+set splitright
+set splitbelow
+
+" Decent wildmenu
+set wildmenu
+set wildmode=list:longest
+set wildignore=*~,*.png,*.jpg,*.gif
+
+" Use small tabs
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+" Proper search
+set incsearch
+set ignorecase
+set smartcase
+set gdefault " default :s///g
+set wrapscan
+set hlsearch
+
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" GUI Settings
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+set laststatus=2
+set relativenumber
+set number
+set showcmd
+syntax enable
+colorscheme murphy
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Keyboard Shortcuts
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+nnoremap z zz
+
+" Rich term mode
+tnoremap <C-[><C-[> <C-\><C-n>
+
+" Toggle Tags
+nnoremap <C-TAB> gt
+
+" Move by line
+nnoremap j gj
+nnoremap k gk
+
+" Scroll half a page
+nnoremap <C-h> ^
+vnoremap <C-h> ^
+nnoremap <C-j> <C-d>zz
+nnoremap <C-k> <C-u>zz
+nnoremap <C-l> $
+vnoremap <C-l> $
