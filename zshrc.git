@@ -1,0 +1,3 @@
+# https://github.com/woefe/git-prompt.zsh
+source ~/.zsh/git-prompt.zsh/git-prompt.zsh
+source ~/.zsh/git-prompt.zsh/examples/rprompt.zsh
